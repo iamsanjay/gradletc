@@ -1,0 +1,15 @@
+name: Prepare Gradle Build
+description: 'Prepares a Gradle build. Sets up Java and Gradle and configures Gradle properties'
+inputs:
+  java-toolchain:
+    description: 'Whether a Java toolchain should be used'
+    required: false
+    default: 'false'
+  java-version:
+    description: 'Java version to use for the build'
+    required: false
+    default: '17'
+runs:
+  steps:
+    -   name: Print greeting
+        run: echo "Hello, ${{ inputs.java-version }}!"
